@@ -1,7 +1,7 @@
 /* add your CSS here */
 ul {
     list-style: none;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 img {
@@ -22,7 +22,7 @@ img {
 
 .frame {
     border-radius: 5px;
-    padding: 0px 16px 0px 16px;    
+    padding: 0 16px;    
     border: 1px solid lightgrey;
     width: 300px;
 }
