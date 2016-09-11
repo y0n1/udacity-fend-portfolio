@@ -1,0 +1,17 @@
+{
+  "name": "p1-portfolio-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio site project - Part 1 of Udacity's FEND program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Kilzi",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-responsive-images": "^0.1.9"
+  },
+  "repository": {}
+}
