@@ -1,7 +1,9 @@
 
 @import 'https://fonts.googleapis.com/css?family=Exo';
 
-.bg-darkknight { background-color: #1D1F20; }
+.bg-darkknight {
+  background-color: #1D1F20;
+}
 
 .flex-container {
   display: flex;

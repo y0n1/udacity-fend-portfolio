@@ -4,7 +4,6 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles/style.css">
@@ -28,7 +27,10 @@
 
   <main class="flex-container--centered box">
     <picture>
-      <img class="box" src="images/batman-superman-wonder_woman-large_1x.png" alt="A big picture of Batman, Superman and Wonder Woman">
+      <source media="(min-width: 360px)" srcset="images/batman-superman-wonder_woman-small_3x.png 3x, images/batman-superman-wonder_woman-medium_2x.png" />
+      <source media="(min-width: 768px)" srcset="images/batman-superman-wonder_woman-medium_2x.png 2x, images/batman-superman-wonder_woman-large_1x.png" />
+      <source media="(min-width: 1280px)" srcset="images/batman-superman-wonder_woman-large_1x.png" />
+      <img class="box" src="images/batman-superman-wonder_woman-medium_2x.png" alt="A big picture of Batman, Superman and Wonder Woman">
     </picture>
   </main>
 
