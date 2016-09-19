@@ -1,32 +1,73 @@
 /*
-This is our Grunt Wrapper, this tells node we are using grunt! 
- */
+ After you have changed the settings under responsive_images
+ run this with one of these options:
+  "grunt" alone creates a new, completed images directory
+  "grunt clean" removes the images directory
+  "grunt responsive_images" re-processes images without removing the old ones
+*/
 
-module.exports = function (grunt) { 
-	/*
-	Loading our config
-	 */
-	var config = grunt.file.readYAML('Gruntconfig.yml');
+module.exports = function(grunt) {
 
-	/*
-	Load our Grunt Tasks
-	 */
-	 require('load-grunt-tasks')(grunt);
+  grunt.initConfig({
+    responsive_images: {
+      dev: {
+        options: {
+          concurrency: require('os').cpus().length - 1,
+          engine: 'im',
+          sizes: [
+            {
+              name: "small",
+              width: 80,
+              suffix: '_3x',
+              quality: 50
+            },
+            {
+              name: "medium",
+              width: 160,
+              suffix: '_2x',
+              quality: 75
+            },
+            {
+              name: "large",
+              width: 320,
+              suffix: '_1x',
+              quality: 90
+            }
+          ]
+        },
 
-	/*
-	Configure our tasks
-	 */
-	 require('./grunt_tasks/sass.js')(grunt, config);
-	 require('./grunt_tasks/javascript.js')(grunt, config);
-	/*
-	Register our tasks 
-	 */
-	
-	grunt.registerTask('default', [
-		'sass',
-		'concat',
-		'jshint',
-		'csslint',
-		'watch'
-	]);
+        
+        files: [{
+          expand: true,
+          src: ['*.{gif,jpg,png}'],
+          cwd: 'images_src/',
+          dest: 'public/images'
+        }]
+      }
+    },
+
+    /* Clear out the images directory if it exists */
+    clean: {
+      dev: {
+        src: ['public/images'],
+      },
+    },
+
+    /* Generate the images directory if it is missing */
+    mkdir: {
+      dev: {
+        options: {
+          create: ['public/images']
+        },
+      },
+    },
+
+  });
+
+  grunt.loadNpmTasks('grunt-responsive-images');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-mkdir');
+  grunt.registerTask('default', ['clean', 'mkdir', 'responsive_images']);
+
 };

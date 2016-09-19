@@ -1,0 +1,95 @@
+
+@import 'https://fonts.googleapis.com/css?family=Exo';
+
+/* Utility Classes*/
+.bg-red { background-color: red; }
+.bg-green { background-color: green; }
+.bg-blue { background-color: blue; }
+.bg-cyan { background-color: cyan; }
+.bg-magenta { background-color: magenta; }
+.bg-yellow { background-color: yellow; }
+.bg-darkknight { background-color: rgb(29, 31, 32); }
+.bg-blackhole { background-color: black;}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container--centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  margin: 4px;
+  padding: 5px;
+  border-radius: 7pt;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.normal {
+	filter: invert(0%);
+}
+
+.inverted {
+	filter: invert(100%);
+}
+
+
+body {
+  min-width: 360px;
+  max-width: 960px;
+  margin: 20px auto;
+  font-family: 'Exo', sans-serif;
+}
+
+.logo {
+  min-width: 15%;
+}
+
+.bio {
+  width: 85%;
+  padding-right: 20px;
+}
+
+hr {
+  height: 5px;
+}
+
+article {
+  flex: 1 1 calc(100% / 3);
+}
+
+figcaption {
+  text-align: center;
+  color: darkblue;
+  font-weight: bold;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    color: darkslategrey;
+}
+
+@media screen and (max-width: 360px) {
+  footer > .title {
+    margin-top: 70px;
+  }
+
+  .logo {
+    display: none;
+  }
+} 
