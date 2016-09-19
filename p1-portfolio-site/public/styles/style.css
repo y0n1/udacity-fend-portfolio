@@ -1,15 +1,7 @@
 
 @import 'https://fonts.googleapis.com/css?family=Exo';
 
-/* Utility Classes*/
-.bg-red { background-color: red; }
-.bg-green { background-color: green; }
-.bg-blue { background-color: blue; }
-.bg-cyan { background-color: cyan; }
-.bg-magenta { background-color: magenta; }
-.bg-yellow { background-color: yellow; }
-.bg-darkknight { background-color: rgb(29, 31, 32); }
-.bg-blackhole { background-color: black;}
+.bg-darkknight { background-color: #1D1F20; }
 
 .flex-container {
   display: flex;
@@ -86,10 +78,14 @@ a:hover, a:visited, a:link, a:active {
 
 @media screen and (max-width: 360px) {
   footer > .title {
-    margin-top: 70px;
+    margin-top: 50px;
   }
 
   .logo {
     display: none;
+  }
+
+  body {
+    margin: 0 auto;
   }
 } 
