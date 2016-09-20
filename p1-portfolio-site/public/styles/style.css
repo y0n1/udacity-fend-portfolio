@@ -1,8 +1,11 @@
-
 @import "https://fonts.googleapis.com/css?family=Exo";
 
 .bg-darkknight {
-  background-color: #1D1F20;
+  background-color: #1d1f20;
+}
+
+.bg-bluesky-gradient {
+  background: linear-gradient(to bottom, #207cca 25%,lightgray 75%);
 }
 
 .flex-container {
@@ -10,7 +13,7 @@
   flex-wrap: wrap;
 }
 
-.flex-container--centered {
+.flex-container-centered {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,11 +45,11 @@
 	filter: invert(100%);
 }
 
-
 body {
   min-width: 360px;
-  max-width: 960px;
-  margin: 20px auto;
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100vh;
   font-family: "Exo", sans-serif;
 }
 
@@ -57,6 +60,7 @@ body {
 .bio {
   width: 85%;
   padding-right: 20px;
+  color: lightgray;
 }
 
 hr {
@@ -67,27 +71,56 @@ article {
   flex: 1 1 calc(100% / 3);
 }
 
-figcaption {
-  text-align: center;
-  color: darkblue;
-  font-weight: bold;
+.batman-article {
+   order: 3;
 }
 
-a:hover, a:visited, a:link, a:active {
+.wonder-woman-article {
+  order: 1;
+}
+
+.green-lantern-article {
+  order: 2;
+}
+
+figure {
+  width: 100%;
+}
+
+.figure-img {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+figcaption {
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
     text-decoration: none;
-    color: darkslategrey;
+    color: gray;
+}
+
+.call-them-too-title {
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 360px) {
-  footer > .title {
-    margin-top: 50px;
-  }
-
-  .logo {
-    display: none;
+  .call-them-too-title {
+    margin-top: 60px;
   }
 
   body {
     margin: 0 auto;
+  }
+
+  .bio {
+    font-size: small;
   }
 } 
