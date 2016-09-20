@@ -1,5 +1,5 @@
 
-@import 'https://fonts.googleapis.com/css?family=Exo';
+@import "https://fonts.googleapis.com/css?family=Exo";
 
 .bg-darkknight {
   background-color: #1D1F20;
@@ -47,7 +47,7 @@ body {
   min-width: 360px;
   max-width: 960px;
   margin: 20px auto;
-  font-family: 'Exo', sans-serif;
+  font-family: "Exo", sans-serif;
 }
 
 .logo {
