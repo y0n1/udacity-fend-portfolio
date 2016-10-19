@@ -1,0 +1,24 @@
+{
+  "name": "frontend-nanodegree-resume",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An online resume project, part of Udacity's FEND",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y0n1/frontend-nanodegree-resume.git"
+  },
+  "author": "y0n1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/y0n1/frontend-nanodegree-resume/issues"
+  },
+  "homepage": "https://github.com/y0n1/frontend-nanodegree-resume#readme",
+  "devDependencies": {
+    "live-server": "^1.1.0"
+  }
+}
