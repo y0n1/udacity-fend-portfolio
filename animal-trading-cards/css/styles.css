@@ -49,7 +49,7 @@ ul {
 @media screen and (orientation: landscape) and (max-width: 1160px) {
   .frame-external {
     justify-content: center;
-    width: 75vw;
+    width: 640px;
   }
 
   .frame-internal:first-of-type {
