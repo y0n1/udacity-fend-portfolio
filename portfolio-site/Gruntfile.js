@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 /*
  After you have changed the settings under responsive_images
  run this with one of these options:
@@ -40,8 +42,8 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: ['*.{gif,jpg,png}'],
-          cwd: 'images_src/',
-          dest: 'public/images'
+          cwd: 'src/images',
+          dest: 'src/images/generated'
         }]
       }
     },
@@ -49,7 +51,7 @@ module.exports = function(grunt) {
     /* Clear out the images directory if it exists */
     clean: {
       dev: {
-        src: ['public/images'],
+        src: ['src/images/generated'],
       },
     },
 
@@ -57,7 +59,7 @@ module.exports = function(grunt) {
     mkdir: {
       dev: {
         options: {
-          create: ['public/images']
+          create: ['src/images/generated']
         },
       },
     },
