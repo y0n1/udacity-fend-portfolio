@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Caesar+Dressing");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+body,
+.centered--middle,
+flipping-card .frontside,
+flipping-card .backside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+flipping-card {
+  width: 450px;
+  height: 678px;
+  position: relative;
+  perspective: 500px;
+  will-change: transform;
+}
+
+flipping-card .frontside,
+flipping-card .backside {
+  border: 2pt solid gray;
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 19px;
+}
+
+flipping-card button {
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  border-radius: 19px;
+}
+
+flipping-card button:focus {
+  outline: none; 
+  box-shadow: 0 0 0 2pt rgb(77, 144, 254);
+}
+
+flipping-card .frontside {
+  background-color: white;
+}
+
+flipping-card .backside {
+  background: url(/images/card-back-tespa-450x678.png) center center no-repeat;
+  transform: rotateY(180deg);
+}
+
+flipping-card .backside > button {
+  text-indent: -9999px;
+}
