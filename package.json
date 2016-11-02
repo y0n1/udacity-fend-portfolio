@@ -1,0 +1,24 @@
+{
+  "name": "udacity-fend-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "My Portfolio from Udacitiy's Front-end Web Developer Nanodegree",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/y0n1/udacity-fend-portfolio.git"
+  },
+  "author": "y0n1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/y0n1/udacity-fend-portfolio/issues"
+  },
+  "homepage": "https://github.com/y0n1/udacity-fend-portfolio#readme",
+  "devDependencies": {
+    "live-server": "^1.1.0"
+  }
+}
