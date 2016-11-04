@@ -67,7 +67,7 @@ flipping-card .frontside {
 }
 
 flipping-card .backside {
-  background: url(/images/card-back-tespa-450x678.png) center center no-repeat;
+  background: url(../images/card-back-tespa-450x678.png) center center no-repeat;
   transform: rotateY(180deg);
 }
 
