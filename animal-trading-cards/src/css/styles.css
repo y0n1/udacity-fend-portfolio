@@ -63,7 +63,7 @@ flipping-card button:focus {
 }
 
 flipping-card .frontside {
-  background-color: white;
+  background-color: tan;
 }
 
 flipping-card .backside {
