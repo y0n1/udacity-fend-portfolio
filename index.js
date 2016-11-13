@@ -3,13 +3,15 @@
 const fs = require('fs');
 const liveServer = require('live-server');
 
+let [, , ...args] = process.argv;
+let selectedProject = args[0].replace(/[\.\\/]+/, '');
 let projects = new Set();
 let excluded = new Set([
   '.git',
   'node_modules',
 ]);
 
-// Parses the current directory and adds all projects
+// Parses the current directory and adds all projects to the set
 fs.readdirSync('./')
   .filter((entry) => {
     return !excluded.has(entry) && (fs.statSync(`./${entry}`).isDirectory())
@@ -18,12 +20,10 @@ fs.readdirSync('./')
     projects.add(dir);
   });
 
-let [, , ...args] = process.argv;
 if (args.length == 0) {
   throw new Error('No project was specified!');
 }
 
-let selectedProject = args[0].replace(/[\.\\/]+/, '');
 if (projects.has(selectedProject)) {
   liveServer.start({ root: `${selectedProject}/src` });
 } else {
