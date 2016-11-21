@@ -97,7 +97,7 @@ var Engine = (function(global) {
      */
     function checkCollisions() {
       allEnemies.forEach((enemy)=>{
-        if (enemy.x) {}
+        // TODO: Complete me...
       });
     }
 
