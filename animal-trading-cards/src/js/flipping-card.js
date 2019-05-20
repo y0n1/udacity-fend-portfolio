@@ -1,9 +1,17 @@
-'use strict';
-
 class FlippingCard extends HTMLElement {
 
   constructor() {
     super();
+
+    this._side = FlippingCard.SIDES.FRONT;
+    this._front = this.querySelector('.frontside');
+    this._back = this.querySelector('.backside');
+    this._buttons = this.querySelectorAll('button');
+
+    Array.from(this._buttons)
+      .forEach((button) => {
+        button.addEventListener('click', () => {this.flip()});
+      }, this);
   }
 
   static get SIDES() {
@@ -58,29 +66,18 @@ class FlippingCard extends HTMLElement {
    * The behavior you define occurs when the element is registered.
    * @memberOf FlippingCard
    */
-  createdCallback() {
-    this._side = FlippingCard.SIDES.FRONT;
-    this._front = this.querySelector('.frontside');
-    this._back = this.querySelector('.backside');
-    this._buttons = this.querySelectorAll('button');
-  }
+  connectedCallback() { }
   
   /**
    * The behavior occurs when the element is inserted into the DOM.
    * @memberOf FlippingCard
    */
-  attachedCallback() {
-    Array.from(this._buttons)
-      .forEach((button) => {
-        button.addEventListener('click', () => {this.flip()});
-      }, this);
-  }
 
   /**
    * The behavior occurs when the element is removed from the DOM.
    * @memberOf FlippingCard
    */
-  detachedCallback() {}
+  diconnectedCallback() {}
 
   /**
    * The behavior occurs when an attribute of the element is added, changed, or removed
@@ -91,7 +88,8 @@ class FlippingCard extends HTMLElement {
    * 
    * @memberOf FlippingCard
    */
-  // attributeChangedCallback (name, oldValue, newValue) {}
+  attributeChangedCallback (name, oldValue, newValue) {}
 }
 
-document.registerElement('flipping-card', FlippingCard);
+customElements.define('flipping-card', FlippingCard);
+

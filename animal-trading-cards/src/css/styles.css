@@ -13,6 +13,10 @@ body {
   overflow: hidden;
 }
 
+body {
+  background-color: rgb(75, 100, 80);
+}
+
 ul {
   list-style: none;
   padding-left: 0;
@@ -58,7 +62,7 @@ flipping-card button {
 }
 
 flipping-card button:focus {
-  outline: none; 
+  outline: none;
   box-shadow: 0 0 0 2pt rgb(77, 144, 254);
 }
 
